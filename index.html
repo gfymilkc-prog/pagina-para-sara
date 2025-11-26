@@ -3,112 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Sara 💖</title>
+    <title>Para Mi Sara ❤️</title>
 
     <style>
         body {
-            background-color: #ffe6f2;
+            background-color: #000;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+            overflow-x: hidden;
+            color: white;
+            text-align: center;
+            position: relative;
         }
 
-        .contenedor {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 30px auto;
-            max-width: 900px;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-            animation: slide 1.5s ease forwards;
+        /* ============= ANIMACIÓN DE LAS FRASES ============= */
+        .frase {
+            font-size: 24px;
+            margin: 35px 0;
+            color: #ffb6d9;
+            position: relative;
+            animation: slideIn 1.8s ease forwards;
             opacity: 0;
-        }
-
-        .contenedor:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        @keyframes slide {
-            from { transform: translateX(-100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        .contenedor img {
-            width: 270px;
-            height: auto;
-            border-radius: 15px;
-            margin-right: 20px;
-        }
-
-        .contenedor:nth-child(even) img {
-            margin-right: 0;
-            margin-left: 20px;
-        }
-
-        .texto {
-            font-size: 22px;
-            color: #ff4fa3;
             line-height: 1.4;
+            padding: 0 20px;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        /* ============= ESTILO IMÁGENES ============= */
+        .img-box {
+            margin: 20px auto;
+        }
+
+        .img-box img {
+            width: 300px;
+            border-radius: 15px;
+            border: 3px solid #ffb6d9;
+        }
+
+        h1 {
+            color: #ffb6d9;
+            margin-top: 25px;
+        }
+
+        /* ============= CORAZONES MORADOS ============= */
+        .corazon {
+            position: fixed;
+            color: #b84cff; /* morado suave */
+            font-size: 25px;
+            animation: flotar 6s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0) scale(1); opacity: 0.9; }
+            100% { transform: translateY(-200vh) scale(1.5); opacity: 0; }
         }
     </style>
 </head>
 
 <body>
 
-    <h1 style="text-align:center; color:#ff4fa3;">Para Sara 💖</h1>
+    <h1>Para mi niña preciosa ❤️</h1>
 
-    <!-- Bloque 1 -->
-    <div class="contenedor">
+    <!-- ========================================================= -->
+    <!--               FRASES + IMÁGENES DEL USUARIO                -->
+    <!-- ========================================================= -->
+
+    <div class="img-box">
         <img src="img1.jpeg" alt="imagen 1">
-        <div class="texto">2 meses de alegría, risas, romance pero más que todo comodidad.</div>
     </div>
 
-    <!-- Bloque 2 -->
-    <div class="contenedor">
+    <div class="frase">Ya cumplimos 2 meses desde que somos novios.</div>
+    <div class="frase">2 meses de alegría, risas, romance pero más que todo comodidad.</div>
+
+    <div class="img-box">
         <img src="img2.jpeg" alt="imagen 2">
-        <div class="texto">Recuerdo la primera vez que te vi, tu voz tan dulce me hipnotizó desde las primeras frases que oraste.</div>
     </div>
 
-    <!-- Bloque 3 -->
-    <div class="contenedor">
+    <div class="frase">
+        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó 
+        desde las primeras frases que oraste.
+    </div>
+
+    <div class="img-box">
         <img src="img3.jpeg" alt="imagen 3">
-        <div class="texto">Me haces sentir como un niño chiquito otra vez.</div>
     </div>
 
-    <!-- Bloque 4 -->
-    <div class="contenedor">
+    <div class="frase">
+        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, 
+        y quiero pasar el resto de mis días a tu lado.
+    </div>
+
+    <div class="img-box">
         <img src="img4.jpeg" alt="imagen 4">
-        <div class="texto">Eres la niña más dulce que he conocido, y quiero pasar el resto de mis días a tu lado.</div>
     </div>
 
-    <!-- Bloque 5 -->
-    <div class="contenedor">
+    <div class="frase">
+        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré 
+        el resto de mi vida.
+    </div>
+
+    <div class="img-box">
         <img src="img5.jpeg" alt="imagen 5">
-        <div class="texto">Eres todo lo que necesité, necesito y necesitaré el resto de mi vida.</div>
     </div>
 
-    <!-- Bloque 6 -->
-    <div class="contenedor">
+    <div class="frase">
+        Lo siento por no ser el primer niño que conociste, 
+        pero te prometo que voy a ser el mejor que pudiste conocer.
+    </div>
+
+    <div class="frase" style="font-size: 28px; margin-top: 40px; color:#ff8abf;">
+        TE AMO SARA MUCHO MUCHO MUCHITO ❤️💗
+    </div>
+
+    <div class="img-box">
         <img src="img6.jpeg" alt="imagen 6">
-        <div class="texto">Lo siento por no ser el primer niño que conociste, pero te prometo ser el mejor.</div>
     </div>
 
-    <!-- Bloque 7 -->
-    <div class="contenedor">
-        <img src="img7.jpeg" alt="imagen 7">
-        <div class="texto">Eres la niña más graciosa que he visto.</div>
-    </div>
 
-    <!-- Bloque 8 -->
-    <div class="contenedor">
-        <img src="img8.jpeg" alt="imagen 8">
-        <div class="texto"><b>TE AMO SARA MUCHO MUCHO MUCHITO 💗</b></div>
-    </div>
+    <!-- ========================================================= -->
+    <!--                 CORAZONES MORADOS ANIMADOS                -->
+    <!-- ========================================================= -->
+
+    <script>
+        function crearCorazon() {
+            const corazon = document.createElement("div");
+            corazon.classList.add("corazon");
+            corazon.innerHTML = "💜";
+
+            // posición aleatoria en las esquinas
+            const lado = Math.random() < 0.5 ? "left" : "right";
+            const offset = Math.random() * 100;
+
+            if (lado === "left") {
+                corazon.style.left = offset + "px";
+                corazon.style.bottom = "0px";
+            } else {
+                corazon.style.right = offset + "px";
+                corazon.style.bottom = "0px";
+            }
+
+            // tamaño random
+            corazon.style.fontSize = (20 + Math.random() * 25) + "px";
+
+            document.body.appendChild(corazon);
+
+            // eliminar corazones cuando se van
+            setTimeout(() => {
+                corazon.remove();
+            }, 6000);
+        }
+
+        // Cada 400ms sale un corazón nuevo
+        setInterval(crearCorazon, 400);
+    </script>
 
 </body>
 </html>
+
+
 
 
 
