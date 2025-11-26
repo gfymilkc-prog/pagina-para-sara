@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Para Mi Sara ❤️</title>
-
     <style>
         body {
             background-color: #000;
@@ -13,16 +12,25 @@
             color: white;
             text-align: center;
             position: relative;
+            margin: 0;
+            padding-bottom: 60px;
         }
 
-        .frase {
-            font-size: 24px;
-            margin: 35px 0;
+        h1 {
             color: #ffb6d9;
+            margin: 25px 0;
+        }
+
+        /* FRASES */
+        .frase {
+            font-size: 22px;
+            margin: 28px auto;
+            color: #ffb6d9;
+            max-width: 900px;
             position: relative;
-            animation: slideIn 1.8s ease forwards;
+            animation: slideIn 1.6s ease forwards;
             opacity: 0;
-            line-height: 1.4;
+            line-height: 1.5;
             padding: 0 20px;
         }
 
@@ -31,132 +39,139 @@
             100% { transform: translateX(0); opacity: 1; }
         }
 
+        /* IMAGENES */
         .img-box {
-            margin: 20px auto;
+            margin: 12px auto;
         }
-
         .img-box img {
-            width: 300px;
-            border-radius: 15px;
+            width: 320px;
+            max-width: 90%;
+            border-radius: 14px;
             border: 3px solid #ffb6d9;
+            display: block;
+            margin: 0 auto;
         }
 
-        h1 {
-            color: #ffb6d9;
-            margin-top: 25px;
-        }
-
-        /* Corazones */
+        /* CORAZONES (estilo de cada corazón) */
         .corazon {
             position: fixed;
-            bottom: 0;
-            color: #b84cff;
-            opacity: 0.9;
-            font-size: 30px;
-            animation: subir 5s linear forwards;
+            bottom: -40px;
             pointer-events: none;
+            color: #b84cff;
+            opacity: 0.95;
+            transform-origin: center;
+            will-change: transform, opacity;
+            user-select: none;
         }
 
         @keyframes subir {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(20deg) scale(1.4);
+                opacity: 0;
+            }
         }
+
+        /* evita que el contenido tape los corazones si hay z-index raro */
+        body > * { position: relative; z-index: 1; }
     </style>
 </head>
-
 <body>
 
     <h1>Para mi niña preciosa ❤️</h1>
 
-    <div class="img-box">
-        <img src="img1.jpeg" alt="imagen 1">
-    </div>
+    <!-- Imagen 1 -->
+    <div class="img-box"><img src="img1.jpeg" alt="imagen 1"></div>
+    <div class="frase">Ya cumplimos 2 meses desde que somos novios</div>
 
-    <div class="frase">Ya cumplimos 2 meses desde que somos novios.</div>
     <div class="frase">2 meses de alegría, risas, romance pero más que todo comodidad.</div>
 
-    <div class="img-box">
-        <img src="img2.jpeg" alt="imagen 2">
-    </div>
+    <!-- Imagen 2 -->
+    <div class="img-box"><img src="img2.jpeg" alt="imagen 2"></div>
 
     <div class="frase">
-        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó 
-        desde las primeras frases que oraste.
+        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó desde las primeras frases que oraste.
     </div>
 
-    <div class="img-box">
-        <img src="img3.jpeg" alt="imagen 3">
-    </div>
+    <!-- Imagen 3 -->
+    <div class="img-box"><img src="img3.jpeg" alt="imagen 3"></div>
 
     <div class="frase">
-        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, 
-        y quiero pasar el resto de mis días a tu lado.
+        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, y quiero pasar el resto de mis días a tu lado.
     </div>
 
-    <div class="img-box">
-        <img src="img4.jpeg" alt="imagen 4">
-    </div>
+    <!-- Imagen 4 -->
+    <div class="img-box"><img src="img4.jpeg" alt="imagen 4"></div>
 
     <div class="frase">
-        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré 
-        el resto de mi vida.
+        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré el resto de mi vida.
     </div>
 
-    <div class="img-box">
-        <img src="img5.jpeg" alt="imagen 5">
-    </div>
+    <!-- Imagen 5 -->
+    <div class="img-box"><img src="img5.jpeg" alt="imagen 5"></div>
 
     <div class="frase">
-        Lo siento por no ser el primer niño que conociste, pero te prometo que voy a ser 
-        el mejor que pudiste conocer.
+        Lo siento por no ser el primer niño que conociste, pero te prometo que voy a ser el mejor que pudiste conocer.
     </div>
 
-    <div class="frase" style="font-size: 28px; margin-top: 40px; color:#ff8abf;">
+    <div class="frase" style="font-size:26px; margin-top:36px; color:#ff8abf;">
         TE AMO SARA MUCHO MUCHO MUCHITO ❤️💗
     </div>
 
-    <div class="img-box">
- <img src="img1.jpeg" alt="imagen 1">
-<img src="img2.jpeg" alt="imagen 2">
-<img src="img3.jpeg" alt="imagen 3">
-<img src="img4.jpeg" alt="imagen 4">
-<img src="img5.jpeg" alt="imagen 5">
-<img src="img6.jpeg" alt="imagen 6">
-<img src="img7.jpeg" alt="imagen 7">
-<img src="img8.jpeg" alt="imagen 8">
+    <!-- Imagen 6,7,8 -->
+    <div class="img-box"><img src="img6.jpeg" alt="imagen 6"></div>
+    <div class="img-box"><img src="img7.jpeg" alt="imagen 7"></div>
+    <div class="img-box"><img src="img8.jpeg" alt="imagen 8"></div>
 
-
-    </div>
-
-    <!-- CORAZONES ANIMADOS -->
+    <!-- SCRIPTS: CORAZONES -->
     <script>
-        function crearCorazon() {
-            let corazon = document.createElement("div");
-            corazon.classList.add("corazon");
-            corazon.innerHTML = "💜";
+        (function(){
+            function crearCorazon() {
+                const c = document.createElement("div");
+                c.className = "corazon";
+                c.textContent = "💜";
 
-            // Posición aleatoria en left o right
-            if (Math.random() < 0.5) {
-                corazon.style.left = (Math.random() * 80) + "px";
-            } else {
-                corazon.style.right = (Math.random() * 80) + "px";
+                // tamaño aleatorio
+                const size = 18 + Math.random() * 36;
+                c.style.fontSize = size + "px";
+
+                // lado (left o right) y offset en px
+                if (Math.random() < 0.5) {
+                    c.style.left = (10 + Math.random() * 220) + "px";
+                } else {
+                    c.style.right = (10 + Math.random() * 220) + "px";
+                }
+
+                // duración y delay para la animación
+                const dur = 4200 + Math.random() * 2000;
+                c.style.animation = `subir ${dur}ms linear forwards`;
+
+                // rotación inicial leve
+                c.style.transform = "rotate(" + (Math.random()*40 - 20) + "deg)";
+
+                // z-index menor que contenido
+                c.style.zIndex = 0;
+
+                document.body.appendChild(c);
+
+                // eliminar al finalizar
+                setTimeout(()=> { c.remove(); }, dur + 100);
             }
 
-            // Random size
-            corazon.style.fontSize = (20 + Math.random() * 25) + "px";
-
-            document.body.appendChild(corazon);
-
-            // Eliminar después de animación
-            setTimeout(() => {
-                corazon.remove();
-            }, 5000);
-        }
-
-        setInterval(crearCorazon, 350);
+            // crear muchos corazones al inicio y luego cada 300ms
+            for (let i=0;i<6;i++) {
+                setTimeout(crearCorazon, i * 250);
+            }
+            setInterval(crearCorazon, 320);
+        })();
     </script>
 
 </body>
 </html>
+
+
 
 
