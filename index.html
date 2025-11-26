@@ -1,105 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Para Sara</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #fff0f6;
-        font-family: "Poppins", sans-serif;
-        overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Sara ❤️</title>
 
-    .contenedor {
-        position: absolute;
-        top: 50%;
-        left: -100%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        opacity: 0;
-        transition: all 1s ease-in-out;
-    }
+    <style>
+        body {
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            color: white;
+            text-align: center;
+        }
 
-    .contenedor img {
-        width: 230px;
-        height: 230px;
-        border-radius: 20px;
-        object-fit: cover;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
+        .frase {
+            font-size: 24px;
+            margin: 35px 0;
+            color: #ffb6d9; /* rosa suave */
+            position: relative;
+            animation: slideIn 1.8s ease forwards;
+            opacity: 0;
+            line-height: 1.4;
+            padding: 0 20px;
+        }
 
-    .texto {
-        font-size: 28px;
-        font-weight: bold;
-        color: #ff8cb4; /* rosa suave */
-        max-width: 600px;
-    }
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
 
-    .visible {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
-</style>
+        .img-box {
+            margin: 20px auto;
+        }
+
+        .img-box img {
+            width: 300px;
+            border-radius: 15px;
+            border: 3px solid #ffb6d9;
+        }
+
+        h1 {
+            color: #ffb6d9;
+            margin-top: 25px;
+        }
+    </style>
+
 </head>
-
 <body>
 
-<div id="contenedor" class="contenedor">
-    <img id="imagen" src="">
-    <div id="texto" class="texto"></div>
-</div>
+    <h1>Para mi niña preciosa ❤️</h1>
 
-<script>
-    const frases = [
-        "Ya cumplimos 2 meses desde que somos novios",
-        "2 meses de alegría, risas, romance pero más que todo comodidad.",
-        "Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó.",
-        "Me haces sentir como un niño chiquito otra vez.",
-        "Eres la niña más dulce que he conocido, y quiero pasar mi vida contigo.",
-        "Eres todo lo que necesité, necesito y necesitaré el resto de mi vida.",
-        "Prometo ser el mejor niño que pudiste conocer.",
-        "TE AMO SARA MUCHO MUCHO MUCHITO"
-    ];
+    <!-- Imagen 1 opcional -->
+    <div class="img-box">
+        <img src="img1.jpeg" alt="imagen 1">
+    </div>
 
-    const imagenes = [
-        "img1.jpg.jpeg",
-        "img2.jpg.jpeg",
-        "img3.jpg.jpeg",
-        "img4.jpg.jpeg",
-        "img5.jpg.jpeg",
-        "img6.jpg.jpeg",
-        "img7.jpg.jpeg",
-        "img8.jpg.jpeg"
-    ];
+    <div class="frase">
+        Ya cumplimos 2 meses desde que somos novios.
+    </div>
 
-    let index = 0;
-    const cont = document.getElementById("contenedor");
-    const img = document.getElementById("imagen");
-    const txt = document.getElementById("texto");
+    <div class="frase">
+        2 meses de alegría, risas, romance pero más que todo comodidad.
+    </div>
 
-    function mostrarFrase() {
-        cont.classList.remove("visible");
+    <div class="img-box">
+        <img src="img2.jpeg" alt="imagen 2">
+    </div>
 
-        setTimeout(() => {
-            img.src = imagenes[index];
-            txt.textContent = frases[index];
-            cont.classList.add("visible");
+    <div class="frase">
+        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó desde las primeras frases que oraste.
+    </div>
 
-            index++;
-            if (index < frases.length) {
-                setTimeout(mostrarFrase, 4000);
-            }
-        }, 1000);
-    }
+    <div class="img-box">
+        <img src="img3.jpeg" alt="imagen 3">
+    </div>
 
-    mostrarFrase();
-</script>
+    <div class="frase">
+        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, y quiero pasar el resto de mis días a tu lado.
+    </div>
+
+    <div class="img-box">
+        <img src="img4.jpeg" alt="imagen 4">
+    </div>
+
+    <div class="frase">
+        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré el resto de mi vida.
+    </div>
+
+    <div class="img-box">
+        <img src="img5.jpeg" alt="imagen 5">
+    </div>
+
+    <div class="frase">
+        Lo siento por no ser el primer niño que conociste, pero te prometo que voy a ser el mejor que pudiste conocer.
+    </div>
+
+    <div class="frase" style="font-size: 28px; margin-top: 40px; color:#ff8abf;">
+        TE AMO SARA MUCHO MUCHO MUCHITO ❤️💗
+    </div>
+
+    <div class="img-box">
+        <img src="img8.jpeg" alt="imagen 8">
+         <img src="img7.jpeg" alt="imagen 7">
+         <img src="img6.jpeg" alt="imagen 6">
+         <img src="img5.jpeg" alt="imagen 5">
+         <img src="img4.jpeg" alt="imagen 4">
+         <img src="img3.jpeg" alt="imagen 3">
+         <img src="img2.jpeg" alt="imagen 2">
+         <img src="img1.jpeg" alt="imagen 1">
+    </div>
 
 </body>
 </html>
-
