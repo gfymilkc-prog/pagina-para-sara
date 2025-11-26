@@ -123,6 +123,41 @@
          <img src="img1.jpeg" alt="imagen 1">
     </div>
 
+     <script>
+        function crearCorazon() {
+            const corazon = document.createElement("div");
+            corazon.classList.add("corazon");
+            corazon.innerHTML = "💜";
+
+            // posición aleatoria en las esquinas
+            const lado = Math.random() < 0.5 ? "left" : "right";
+            const offset = Math.random() * 100;
+
+            if (lado === "left") {
+                corazon.style.left = offset + "px";
+                corazon.style.bottom = "0px";
+            } else {
+                corazon.style.right = offset + "px";
+                corazon.style.bottom = "0px";
+            }
+
+            // tamaño random
+            corazon.style.fontSize = (20 + Math.random() * 25) + "px";
+
+            document.body.appendChild(corazon);
+
+            // eliminar corazones cuando se van
+            setTimeout(() => {
+                corazon.remove();
+            }, 6000);
+        }
+
+        // Cada 400ms sale un corazón nuevo
+        setInterval(crearCorazon, 400);
+    </script>
+
+
 </body>
 </html>
+
 
