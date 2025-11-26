@@ -12,12 +12,14 @@
             overflow-x: hidden;
             color: white;
             text-align: center;
+            position: relative;
         }
 
+        /* ============= ANIMACIÓN DE LAS FRASES ============= */
         .frase {
             font-size: 24px;
             margin: 35px 0;
-            color: #ffb6d9; /* rosa suave */
+            color: #ffb6d9;
             position: relative;
             animation: slideIn 1.8s ease forwards;
             opacity: 0;
@@ -30,6 +32,7 @@
             100% { transform: translateX(0); opacity: 1; }
         }
 
+        /* ============= ESTILO IMÁGENES ============= */
         .img-box {
             margin: 20px auto;
         }
@@ -44,7 +47,9 @@
             color: #ffb6d9;
             margin-top: 25px;
         }
-         .corazon {
+
+        /* ============= CORAZONES MORADOS ============= */
+        .corazon {
             position: fixed;
             color: #b84cff; /* morado suave */
             font-size: 25px;
@@ -57,31 +62,30 @@
             100% { transform: translateY(-200vh) scale(1.5); opacity: 0; }
         }
     </style>
-
 </head>
+
 <body>
 
     <h1>Para mi niña preciosa ❤️</h1>
 
-    <!-- Imagen 1 opcional -->
+    <!-- ========================================================= -->
+    <!--               FRASES + IMÁGENES DEL USUARIO                -->
+    <!-- ========================================================= -->
+
     <div class="img-box">
         <img src="img1.jpeg" alt="imagen 1">
     </div>
 
-    <div class="frase">
-        Ya cumplimos 2 meses desde que somos novios.
-    </div>
-
-    <div class="frase">
-        2 meses de alegría, risas, romance pero más que todo comodidad.
-    </div>
+    <div class="frase">Ya cumplimos 2 meses desde que somos novios.</div>
+    <div class="frase">2 meses de alegría, risas, romance pero más que todo comodidad.</div>
 
     <div class="img-box">
         <img src="img2.jpeg" alt="imagen 2">
     </div>
 
     <div class="frase">
-        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó desde las primeras frases que oraste.
+        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó 
+        desde las primeras frases que oraste.
     </div>
 
     <div class="img-box">
@@ -89,7 +93,8 @@
     </div>
 
     <div class="frase">
-        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, y quiero pasar el resto de mis días a tu lado.
+        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, 
+        y quiero pasar el resto de mis días a tu lado.
     </div>
 
     <div class="img-box">
@@ -97,7 +102,8 @@
     </div>
 
     <div class="frase">
-        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré el resto de mi vida.
+        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré 
+        el resto de mi vida.
     </div>
 
     <div class="img-box">
@@ -105,14 +111,15 @@
     </div>
 
     <div class="frase">
-        Lo siento por no ser el primer niño que conociste, pero te prometo que voy a ser el mejor que pudiste conocer.
+        Lo siento por no ser el primer niño que conociste, 
+        pero te prometo que voy a ser el mejor que pudiste conocer.
     </div>
 
     <div class="frase" style="font-size: 28px; margin-top: 40px; color:#ff8abf;">
         TE AMO SARA MUCHO MUCHO MUCHITO ❤️💗
     </div>
 
-    <div class="img-box">
+      <div class="img-box">
         <img src="img8.jpeg" alt="imagen 8">
          <img src="img7.jpeg" alt="imagen 7">
          <img src="img6.jpeg" alt="imagen 6">
@@ -123,7 +130,12 @@
          <img src="img1.jpeg" alt="imagen 1">
     </div>
 
-     <script>
+
+    <!-- ========================================================= -->
+    <!--                 CORAZONES MORADOS ANIMADOS                -->
+    <!-- ========================================================= -->
+
+    <script>
         function crearCorazon() {
             const corazon = document.createElement("div");
             corazon.classList.add("corazon");
@@ -155,7 +167,6 @@
         // Cada 400ms sale un corazón nuevo
         setInterval(crearCorazon, 400);
     </script>
-
 
 </body>
 </html>
