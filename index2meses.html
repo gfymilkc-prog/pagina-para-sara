@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Sara</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff0f6;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+    }
+
+    .contenedor {
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+
+    .contenedor img {
+        width: 230px;
+        height: 230px;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .texto {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ff8cb4; /* rosa suave */
+        max-width: 600px;
+    }
+
+    .visible {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="contenedor" class="contenedor">
+    <img id="imagen" src="">
+    <div id="texto" class="texto"></div>
+</div>
+
+<script>
+    const frases = [
+        "Ya cumplimos 2 meses desde que somos novios",
+        "2 meses de alegría, risas, romance pero más que todo comodidad.",
+        "Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó.",
+        "Me haces sentir como un niño chiquito otra vez.",
+        "Eres la niña más dulce que he conocido, y quiero pasar mi vida contigo.",
+        "Eres todo lo que necesité, necesito y necesitaré el resto de mi vida.",
+        "Prometo ser el mejor niño que pudiste conocer.",
+        "TE AMO SARA MUCHO MUCHO MUCHITO"
+    ];
+
+    const imagenes = [
+        "img1.jpg",
+        "img2.jpg",
+        "img3.jpg",
+        "img4.jpg",
+        "img5.jpg",
+        "img6.jpg",
+        "img7.jpg",
+        "img8.jpg"
+    ];
+
+    let index = 0;
+    const cont = document.getElementById("contenedor");
+    const img = document.getElementById("imagen");
+    const txt = document.getElementById("texto");
+
+    function mostrarFrase() {
+        cont.classList.remove("visible");
+
+        setTimeout(() => {
+            img.src = imagenes[index];
+            txt.textContent = frases[index];
+            cont.classList.add("visible");
+
+            index++;
+            if (index < frases.length) {
+                setTimeout(mostrarFrase, 4000);
+            }
+        }, 1000);
+    }
+
+    mostrarFrase();
+</script>
+
+</body>
+</html>
