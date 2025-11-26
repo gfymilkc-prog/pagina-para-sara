@@ -3,152 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mi Sara ❤️</title>
+    <title>Para Sara 💜</title>
 
     <style>
         body {
-            background-color: #000;
-            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; /* rosa suave */
+            font-family: 'Arial';
+            margin: 0;
+            padding: 20px;
             overflow-x: hidden;
-            color: white;
-            text-align: center;
-            position: relative;
         }
 
         .frase {
-            font-size: 24px;
-            margin: 35px 0;
-            color: #ffb6d9;
-            position: relative;
-            animation: slideIn 1.8s ease forwards;
+            font-size: 28px;
+            color: #ff7fbf;
+            margin-bottom: 30px;
+            animation: slide 2s ease forwards;
             opacity: 0;
-            line-height: 1.4;
-            padding: 0 20px;
         }
 
-        @keyframes slideIn {
-            0% { transform: translateX(-100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
+        @keyframes slide {
+            0% {
+                transform: translateX(-200px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
-        .img-box {
-            margin: 20px auto;
-        }
-
-        .img-box img {
-            width: 300px;
+        .imagen {
+            width: 250px;
             border-radius: 15px;
-            border: 3px solid #ffb6d9;
+            display: block;
+            margin: 20px auto;
+            animation: fade 2.5s ease forwards;
+            opacity: 0;
         }
 
-        h1 {
-            color: #ffb6d9;
-            margin-top: 25px;
-        }
-
-        /* Corazones */
-        .corazon {
-            position: fixed;
-            bottom: 0;
-            color: #b84cff;
-            opacity: 0.9;
-            font-size: 30px;
-            animation: subir 5s linear forwards;
-            pointer-events: none;
-        }
-
-        @keyframes subir {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+        @keyframes fade {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Para mi niña preciosa ❤️</h1>
+    <h1 style="color:#ff4fa3; text-align:center;">Para Sara 💖</h1>
 
-    <div class="img-box">
-        <img src="img1.jpeg" alt="imagen 1">
-    </div>
-
-    <div class="frase">Ya cumplimos 2 meses desde que somos novios.</div>
     <div class="frase">2 meses de alegría, risas, romance pero más que todo comodidad.</div>
+    <div class="frase">Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó desde las primeras frases que oraste.</div>
+    <div class="frase">Me haces sentir como un niño chiquito otra vez.</div>
+    <div class="frase">Eres la niña más dulce que he conocido y quiero pasar el resto de mis días a tu lado.</div>
+    <div class="frase">Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré.</div>
+    <div class="frase">Lo siento por no ser el primer niño que conociste, pero te prometo ser el mejor que pudiste conocer.</div>
+    <div class="frase">TE AMO SARA MUCHO MUCHO MUCHITO 💗</div>
 
-    <div class="img-box">
-        <img src="img2.jpeg" alt="imagen 2">
-    </div>
-
-    <div class="frase">
-        Recuerdo la primera vez que te vi, tu voz es tan dulce que me hipnotizó 
-        desde las primeras frases que oraste.
-    </div>
-
-    <div class="img-box">
-        <img src="img3.jpeg" alt="imagen 3">
-    </div>
-
-    <div class="frase">
-        Me haces sentir como un niño chiquito otra vez, eres la niña más dulce que he conocido, 
-        y quiero pasar el resto de mis días a tu lado.
-    </div>
-
-    <div class="img-box">
-        <img src="img4.jpeg" alt="imagen 4">
-    </div>
-
-    <div class="frase">
-        Eres la niña más graciosa que he visto, eres todo lo que necesité, necesito y necesitaré 
-        el resto de mi vida.
-    </div>
-
-    <div class="img-box">
-        <img src="img5.jpeg" alt="imagen 5">
-    </div>
-
-    <div class="frase">
-        Lo siento por no ser el primer niño que conociste, pero te prometo que voy a ser 
-        el mejor que pudiste conocer.
-    </div>
-
-    <div class="frase" style="font-size: 28px; margin-top: 40px; color:#ff8abf;">
-        TE AMO SARA MUCHO MUCHO MUCHITO ❤️💗
-    </div>
-
-    <div class="img-box">
-        <img src="img6.jpeg" alt="imagen 6">
-    </div>
-
-    <!-- CORAZONES ANIMADOS -->
-    <script>
-        function crearCorazon() {
-            let corazon = document.createElement("div");
-            corazon.classList.add("corazon");
-            corazon.innerHTML = "💜";
-
-            // Posición aleatoria en left o right
-            if (Math.random() < 0.5) {
-                corazon.style.left = (Math.random() * 80) + "px";
-            } else {
-                corazon.style.right = (Math.random() * 80) + "px";
-            }
-
-            // Random size
-            corazon.style.fontSize = (20 + Math.random() * 25) + "px";
-
-            document.body.appendChild(corazon);
-
-            // Eliminar después de animación
-            setTimeout(() => {
-                corazon.remove();
-            }, 5000);
-        }
-
-        setInterval(crearCorazon, 350);
-    </script>
+    <!-- IMÁGENES (recuerda cambiar los nombres si en GitHub aparecen diferentes) -->
+    <img src="img1.jpeg" alt="imagen 1" class="imagen">
+    <img src="img2.jpeg" alt="imagen 2" class="imagen">
+    <img src="img3.jpeg" alt="imagen 3" class="imagen">
+    <img src="img4.jpeg" alt="imagen 4" class="imagen">
+    <img src="img5.jpeg" alt="imagen 5" class="imagen">
+    <img src="img6.jpeg" alt="imagen 6" class="imagen">
+    <img src="img7.jpeg" alt="imagen 7" class="imagen">
+    <img src="img8.jpeg" alt="imagen 8" class="imagen">
 
 </body>
 </html>
+
 
 
 
